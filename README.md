@@ -34,4 +34,5 @@
    7. copy data.ts from frontend to backend
    8. create route for /api/products
    9. return products
-   10. run npm start
+   10.npm run build
+   11.npm run dev
