@@ -7,6 +7,7 @@ import { ApiError } from '../types/ApiError'
 import { Product } from '../types/Product'
 import { getError } from '../utils'
 import ProductItem from '../components/ProductItem'
+import { Helmet } from 'react-helmet-async'
 
 type State = {
   products: Product[]
@@ -65,6 +66,9 @@ export default function HomePage() {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <Row>
+      <Helmet>
+        <title>Ts Anakonda</title>
+      </Helmet>
       {products.map((product) => (
         <Col key={product.slug} sm={6} md={4} lg={3}>
           <ProductItem product={product}/>
